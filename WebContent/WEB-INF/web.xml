@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	metadata-complete="false">
+	<session-config>
+		<session-timeout>120</session-timeout>
+	</session-config>
+	
+	<display-name>portfolio</display-name>
+	<filter>
+		<filter-name>session-filter</filter-name>
+		<filter-class>com.technowlogeek.portfolio.controller.SessionFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>session-filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>home</servlet-name>
+		<jsp-file>/jsp/home.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>addstock</servlet-name>
+		<jsp-file>/jsp/addStock.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>addstock</servlet-name>
+		<url-pattern>/addstock</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>editstock</servlet-name>
+		<jsp-file>/jsp/editStock.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>editstock</servlet-name>
+		<url-pattern>/editstock</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<jsp-file>/jsp/loggedout.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/loggedout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>viewGains</servlet-name>
+		<jsp-file>/jsp/viewGains.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>viewGains</servlet-name>
+		<url-pattern>/viewgains</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>buysell</servlet-name>
+		<jsp-file>/jsp/buysell.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>buysell</servlet-name>
+		<url-pattern>/buysell</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>sectorallocationchart</servlet-name>
+		<jsp-file>/jsp/sectorallocationchart.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>sectorallocationchart</servlet-name>
+		<url-pattern>/sectorallocationchart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>industryallocationchart</servlet-name>
+		<jsp-file>/jsp/industryallocationchart.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>industryallocationchart</servlet-name>
+		<url-pattern>/industryallocationchart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>companyallocationchart</servlet-name>
+		<jsp-file>/jsp/companyallocationchart.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>companyallocationchart</servlet-name>
+		<url-pattern>/companyallocationchart</url-pattern>
+	</servlet-mapping>
+
+</web-app>
+
